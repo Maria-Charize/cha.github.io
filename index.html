@@ -1,0 +1,397 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <style>
+    body {
+     background-color: rgb(240, 225, 205);
+    }
+    header {
+     background: url(img/cover.jpg);
+     background-size: cover;
+     background-position: center;
+     min-height: 500px;
+     position: sticky;
+     z-index: 1;
+    }
+
+    @media screen and (max-width: 670px) {
+     header{
+         min-height: 800px;
+        }
+    }
+
+    .section{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+        
+    }
+    .tabs .indicator{
+    background-color: brown;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active {
+    background: transparent;
+    }
+         
+     </style>
+    <title>Website</title>
+</head>
+<body>
+    <!--nav bar-->
+    <header>
+        <nav class="nav-wrapper transparent">
+            <div class="container">
+                <a href="#" class="brand-logo brown-text text-darken-4" style="font-size: 3e;">Fast-tillas</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down text">
+                    <li><a href="#loginsignup">Login or Sign Up</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.instagram.com" class="tooltipped btn-floating btn-small yellow darken-4"data-tooltip="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small yellow darken-4 brown-text "data-tooltip="twitter ">
+                        <i class="fab fa-twitter"></i>
+                    </a></li>
+                    <li><a href="https://www.facebook.com" class="tooltipped btn-floating btn-small yellow darken-4 "data-tooltip="facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a></li>
+                </ul>
+                <ul class="sidenav grey lighten-2" id="mobile-menu">
+                    <li><a href="#">Login or Sign Up</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--services/tabs-->
+    <section class="container section scrollspy" id="logininsignup">
+        <div class="row">
+            <div class="col s12 l4">
+                <h2 class="brown-text text-darken-4">Welcome!!</h2>
+                <p>Step into the world of sweetness with Fast-Tillas, your one-stop destination for delightful pastillas. At Fast-Tillas, we believe in delivering joy through our candies. Each pastilla is crafted with love, using traditional recipes that have been passed down through generations. Our pastillas come in a variety of shapes and flavors, offering something for everyone. Whether you're a fan of the classic milky pastillas, or looking for something unique like our sushi-inspired pastillas, Fast-Tillas has got you covered. With just a few clicks, you can browse through our collection, place your order, and have your favorite pastillas delivered right to your doorstep. Fast-Tillas is not just a business, it's a celebration of sweetness. Visit our website today and let Fast-Tillas bring a touch of sweetness to your day.</p>
+            </div>
+            <div class="col s12 l6 offset-l2">
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#SignUp" class="brown-text-darken-4">Sign Up</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#Login" class="brown-text-darken-4">Login</a>
+                    </li>
+                </ul>
+                <div class="col s12" id="SignUp">
+                    <div class="col s12 l5 offset-l2">
+                        <form action="">
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input type="email" id="email">
+                                <label for="email">your email</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">message</i>
+                                <textarea id="message" class="materialize-textarea"></textarea>
+                                <label for="message">Your message</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">place</i>
+                                <textarea id="mes" class="materialize-textarea"></textarea>
+                                <label for="mes">Address</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">phone</i>
+                                <textarea id="phone" class="materialize-textarea"></textarea>
+                                <label for="phone">Mobile Number</label>
+                            </div>
+                            <br>
+                            <div class="input-field center signup">
+                                <button class="btn">Sign Up</button>
+                                <script>
+                                    var addButtons = document.getElementsByClassName('signup');
+                                    for (var i = 0; i < addButtons.length; i++) {
+                                        addButtons[i].addEventListener('click', function(event) {
+                                            event.preventDefault();
+                                            alert('Signed Up');
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col s12" id="Login">
+                    <div class="col s12 l5 offset-l2">
+                        <form action="">
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input type="email" id="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">phone</i>
+                                <textarea type="phone" class="materialize-textarea"></textarea>
+                                <label for="phone">Phone</label>
+                            </div>
+                            <br>
+                            <div class="input-field center login">
+                                <button class="btn">Login</button>
+                                <script>
+                                    var addButtons = document.getElementsByClassName('login');
+                                    for (var i = 0; i < addButtons.length; i++) {
+                                        addButtons[i].addEventListener('click', function(event) {
+                                            event.preventDefault();
+                                            alert('Logged In');
+                                        });
+                                    }
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+
+    <!--parallax-->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/designed.jpg" alt=" responsive-img">
+        </div>
+    </div>
+
+    <!--photo/grid-->
+    <section class="container" id="products">
+        <h2>Try Our Best-sellers, Order Now!</h2>
+
+        <div class="row" >
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/regular.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                        
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Regular Milky Pastillas</span>
+                        <p>, Regular Milky Pastillas are a celebration of simple ingredients transformed into a delectable sweet treat. Enjoy the creamy goodness of Regular Milky Pastillas and savor the taste of tradition. The candies are gently rolled in sugar, giving them a sweet outer layer that complements the milky interior. The sweet, creamy taste of the pastillas is a testament to the simplicity of its ingredients and the skill involved in its preparation.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/ube.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                        
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Sweet Ube Pastillas</span>
+                        <p>Experience the unique delight of Sweet Ube Pastillas, a Filipino confectionery masterpiece. These candies are a fusion of the creamy, milky goodness of pastillas and the distinct, sweet flavor of ube, a purple yam native to the Philippines. Sweet Ube Pastillas are not just candies, they're an experience - a sweet, creamy, and unforgettable experience. Try them today and let your taste buds revel in the joy of Sweet Ube Pastillas.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/toasted_1.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                        
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Crunchy Toasted Pastillas</span>
+                        <p>Indulge in the delightful crunch of Toasted Pastillas. These candies take the creamy, milky goodness of traditional pastillas and add a toasted twist. The outside is delicately toasted to a perfect golden brown, adding a satisfying crunch that contrasts beautifully with the soft, sweet interior. Crunchy Toasted Pastillas are not just a candy, they're an adventure for your senses. Try them today and discover the crunchy side of sweetness!</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/heart.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                            
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Colorful Heart Sweet Pastillas</span>
+                        <p>Dive into a world of sweetness with Colorful Sweet Heart Pastillas. Each piece is shaped like a heart, symbolizing the love and care put into making them. The vibrant colors add a playful touch, making each bite a joyous surprise. These pastillas deliver on taste too. Colorful Sweet Heart Pastillas are tokens of joy, meant to be shared with your loved ones. Try them today and let the sweetness of Colorful Sweet Heart Pastillas fill your day with love and happiness.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/rose_1.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Valentine Rose Pastillas</span>
+                        <p>Unveil the sweetness of love with Colorful Valentine Rose Pastillas. Shaped like beautiful roses, are a perfect embodiment of the romance and affection that Valentine's Day represents. The creamy, milky flavor of the pastillas, combined with the artistic rose shape. This Valentine's Day, express your feelings with the sweet taste of Colorful Valentine Rose Pastillas. Love is sweet, and so are these pastillas!</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/puppies_1.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Kawaii puppies Pastillas</span>
+                        <p>Experience the joy of sweetness with Kawaii Puppies Pastillas. Shaped like adorable puppies, are a delightful treat for both the young and the young at heart. Each pastilla is a playful nod to the cuteness of puppies, making them a fun and enjoyable treat. Kawaii Puppies Pastillas are a celebration of sweetness and cuteness combined. Try them today and let the playful sweetness of Kawaii Puppies Pastillas bring a smile to your face.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/sushi_2.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>        
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Sushi-Inspired Pastillas</span>
+                        <p>Experience the fusion of cultures with our Sushi-Inspired Pastillas. Bring together the delicate artistry of sushi and the creamy sweetness of traditional Filipino pastillas. Each piece is carefully crafted to resemble a sushi roll, making it a visual treat. The milky flavor of the pastillas perfectly complements the sushi-inspired design, offering a taste experience that is both familiar and exciting. Try them today and let the fusion of flavors take your taste buds on a delightful journey.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/street_food.jpg" alt="">
+                        <a href="#" class="halfway-fab btn-floating brown lighten-2 pulse addItem">
+                            <i class="material-icons">shopping_bag</i>
+                        </a>        
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Supreme Streetfood Pastillas</span>
+                        <p>Embark on a culinary adventure with Supreme Streetfood Pastillas. These candies capture the vibrant spirit of street food culture, offering a taste experience that is both familiar and exciting. The creamy, milky sweetness of the pastillas is a comforting reminder of home, while the innovative street food-inspired shapes add an element of surprise. Try them today and let the spirit of the streets come alive in every bite.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">More details</a>
+                        <a href="#">View Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var addButtons = document.getElementsByClassName('addItem');
+        for (var i = 0; i < addButtons.length; i++) {
+            addButtons[i].addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Added to cart');
+            });
+        }
+    </script>
+
+    <!--parallax-->
+    <div class="parallax-container">
+    <div class="parallax">
+        <img src="img/sushi.jpg" alt="responsive-img">
+    </div>
+    </div>
+
+    <!--footer-->
+    <footer class="page-footer brown darken-3" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5>Have problems?</h5>
+                    <p>If you have encountered a problem while purchasing. You can contact our customer service hotline or directly contact our company's landline. You can also connect to our social media pages. Enjoy Purchasing!!</p>
+                </div>
+                <div class="col s12 l4 offset-l2">
+                    <h5>Contact Us!</h5>
+                    <p>Customer Service Hotline: 123-456-7890</p>
+                    <p>Fast-tillas Company Landline: 0987-654-321</p>
+                    <h5>Connect</h5>
+                    <ul>    
+                        <li><a href="#" class="grey-text text-lighten-3">Facebook</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Twitter</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Linked In</a></li>
+                        <li><a href="#" class="grey-text text-lighten-3">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright brown lighten-2">
+            <div class="container center-align">&copy; 2023 Fast-tillas</div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialboxed;
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $(".tooltipped").tooltip();
+            $('scrollspy').scrollSpy();
+        })
+    </script>
+    
+</body>
+</html>
